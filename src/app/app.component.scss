@@ -1,0 +1,62 @@
+.filter {
+  background: #f4f4f4;
+  padding: 20px 0 30px;
+  display: flex;
+  flex-shrink: 0;
+
+  .mat-form-field {
+    margin-bottom: -20px;
+    margin-right: 20px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 100px;
+
+    &.short {
+      flex-basis: 25%;
+    }
+
+    &.long {
+      flex-basis: 50%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.users-container {
+  position: relative;
+
+  .loading {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .users-table-container {
+    position: relative;
+    min-height: 300px;
+    max-height: 500px;
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+
+    .user-avatar {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+  }
+}
